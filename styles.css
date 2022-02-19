@@ -91,33 +91,25 @@
     height:60vh;
     background: linear-gradient(120deg,rgb(87, 116, 214),rgb(194, 55, 12));
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.black-box{
-    background-color: black;
-    display: block;
-    /* our width setting for mobile, one image per line */
-    flex-basis: 60vw;
-    /* provide some space between our images */
-    padding: 10px;
-    /* ensure padding doesn't cause images to wrap, it should be within the width rather than in addition */
-  box-sizing: border-box;
-    width:50vw;
-    height:55vh;
-    border-radius: 2%;
+.row-1{
+    display:flex;
+    justify-content: space-evenly;
+}
+.row-2{
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.boxes{
-    width:5vw;
-    height: 5vh;
+.box-colors{
     background-color: white;
-    display: block;
-    /* our width setting for mobile, one image per line */
-    flex-basis: 100%;
-    /* provide some space between our images */
-    padding: 10px;
-    /* ensure padding doesn't cause images to wrap, it should be within the width rather than in addition */
-  box-sizing: border-box;
+    margin: 1rem;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 9%;
+    cursor: pointer;
 }

@@ -11,11 +11,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Poppins:wght@200&family=Quintessential&display=swap"
         rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="header">
     <h2>The Great</h2>
-    <h1 class="colors">rgb(100,100,100)</h1>
+    <h1 class="colors">rgb</h1>
     <h2>COLOR GAME</h2> 
     </div>
     <div class="levels">
@@ -27,15 +28,20 @@
     </div>
 
     <div class="game">
-          <div class="black-box">
-              <div class="boxes"></div>
-              <div class="boxes"></div>
-              <div class="boxes"></div>
-              <div class="boxes"></div>
-              <div class="boxes"></div>
-              <div class="boxes"></div>
-          </div>
+        <div class="row-1">
+          <div class="box-colors r-1 bt-1"></div>
+          <div class="box-colors r-1 bt-2"></div>
+          <div class="box-colors r-1 bt-3"></div>
+        </div>
+        <div class="row-2">
+          <div class="box-colors r-2 bt-4"></div>
+          <div class="box-colors r-2 bt-5"></div>
+          <div class="box-colors r-2 bt-6"></div>
+        </div>
+
     </div>
-    <script href="index.js"></script>
+    <script src="app.js">
+        
+    </script>
 </body>
 </html>
