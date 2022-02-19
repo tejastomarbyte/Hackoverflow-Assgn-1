@@ -5,7 +5,7 @@ const newColorsButton=document.querySelector('.btn-1');
 //add event listeners
 easyLevelButton.addEventListener('click',easylevel);
 hardLevelButton.addEventListener('click',hardlevel);
-
+newColorsButton.addEventListener('click',colorchangelevel);
 
 //functions
 
@@ -33,7 +33,15 @@ function easylevel()
             if(this.classList[2]===guess)
             {   var back=$(`.bt-${headingColor}`).css("background-color");
                  
-                console.log(document.querySelector(".header").style.backgroundColor);
+                document.querySelector(".header").style.backgroundColor=back;
+                $(".box-colors").css("display","flex");
+
+                
+
+            }
+
+            else{
+                 $(this).css({"display":"none"});
             }
      });
      
@@ -56,8 +64,13 @@ function hardlevel(){
          btnx.style.backgroundColor=`rgb( ${red}, ${green}, ${blue} )`;
      //     console.log(btnx);
      }
-
-     
 }
 
 
+function colorchangelevel()
+{    $(".box-colors").css("display","flex");
+     $(".btn-1").click(function(){
+        $(".header").css("background-color","rgba(224, 15, 8, 0.692)");
+     });
+     
+}

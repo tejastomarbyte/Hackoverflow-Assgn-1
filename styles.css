@@ -7,7 +7,7 @@
 
 .header{
     /* background-image: linear-gradient(120deg,rgb(196, 101, 24),rgb(167, 23, 23)); */
-    background: linear-gradient(120deg,rgb(24, 64, 196),rgb(167, 23, 23));
+    background-color: rgba(224, 15, 8, 0.692);
     font-size: 2rem;
     color:white;
     display: flex;
@@ -30,7 +30,7 @@
 .levels{
     padding-top:0.5vh;
     padding-bottom:0.5vh;
-    background: linear-gradient(120deg,rgb(87, 116, 214),rgb(194, 55, 12));
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -89,7 +89,7 @@
 .game{
 
     height:60vh;
-    background: linear-gradient(120deg,rgb(87, 116, 214),rgb(194, 55, 12));
+    background-color: rgb(5, 5, 5);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
