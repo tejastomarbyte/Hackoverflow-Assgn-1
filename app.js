@@ -36,12 +36,12 @@ function easylevel()
                 document.querySelector(".header").style.backgroundColor=back;
                 $(".box-colors").css("display","flex");
 
-                
+                $(".r-1").css("visibility","visible");
 
             }
 
             else{
-                 $(this).css({"display":"none"});
+                 $(this).css("visibility","hidden");
             }
      });
      
@@ -50,7 +50,10 @@ function easylevel()
 function hardlevel(){
      document.querySelector('.row-2').style.display='flex';
      // select all the colors
+     $(".r-1").css("visibility","visible");
+     $(".r-2").css("visibility","visible");
      const headingColor=Math.floor(Math.random()*6)+1;
+     const guess=`bt-${headingColor}`;
      // console.log(allbuttons);
      for(let i=1;i<=6;i++)
      {   const btnx=document.querySelector('.bt-'+i);
@@ -64,13 +67,44 @@ function hardlevel(){
          btnx.style.backgroundColor=`rgb( ${red}, ${green}, ${blue} )`;
      //     console.log(btnx);
      }
-}
+     $('.r-1').click(function(){
+            if(this.classList[2]===guess)
+            {   var back=$(`.bt-${headingColor}`).css("background-color");
+                 
+                document.querySelector(".header").style.backgroundColor=back;
+                $(".box-colors").css("display","flex");
 
+                $(".r-1,.r-2").css("visibility","visible");
 
-function colorchangelevel()
-{    $(".box-colors").css("display","flex");
-     $(".btn-1").click(function(){
-        $(".header").css("background-color","rgba(224, 15, 8, 0.692)");
+            }
+
+            else{
+                 $(this).css("visibility","hidden");
+            }
      });
+     $('.r-2').click(function(){
+            if(this.classList[2]===guess)
+            {   var back=$(`.bt-${headingColor}`).css("background-color");
+                 
+                document.querySelector(".header").style.backgroundColor=back;
+                $(".box-colors").css("display","flex");
+
+                $(".r-2,.r-1").css("visibility","visible");
+
+            }
+
+            else{
+                 $(this).css("visibility","hidden");
+            }
+     });
+
+}
+function colorchangelevel()
+{   $(".r-1").css({"visibility":"visible","background-color":"white"});
+    $(".r-2").css({"visibility":"visible","background-color":"white"});
+    $(".box-colors").css("display","flex");
+    $(".btn-1").click(function(){
+      $(".header").css("background-color","rgba(224, 15, 8, 0.692)");
+    });
      
 }
