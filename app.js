@@ -12,6 +12,7 @@ newColorsButton.addEventListener('click',colorchangelevel);
 function easylevel()
 {    document.querySelector('.row-2').style.display='none'; 
        // select all the colors
+       $(".play-again").css("visibility","hidden");
      const headingColor=Math.floor(Math.random()*3)+1;
      const guess=`bt-${headingColor}`;
      // console.log(guess);
@@ -37,6 +38,7 @@ function easylevel()
                 $('.r-1').css("visibility","visible");
                 $('.r-1').css("background-color",this.style.backgroundColor);
                 document.querySelector(".header").style.backgroundColor=back;
+                $(".play-again").css("visibility","visible");
                 $(".box-colors").css("display","flex");
                 $(".box-colors").unbind("click");
             }
@@ -80,6 +82,7 @@ function easylevel()
 }
 function hardlevel(){
      document.querySelector('.row-2').style.display='flex';
+     $(".play-again").css("visibility","hidden");
      // // select all the colors
      // $(".box-colors").css("visibility","visible");
      // const headingColor=Math.floor(Math.random()*6)+1;
@@ -135,6 +138,7 @@ function hardlevel(){
                $(".box-colors").css("visibility","visible");
                $(".box-colors").css("background-color",this.style.backgroundColor);
                document.querySelector(".header").style.backgroundColor=back;
+               $(".play-again").css("visibility","visible");
                $(".box-colors").unbind("click");
           }
           else{
@@ -176,7 +180,8 @@ function hardlevel(){
 
 }
 function colorchangelevel()
-{   $(".r-1").css({"visibility":"visible","background-color":"white"});
+{   $(".play-again").css("visibility","hidden");
+    $(".r-1").css({"visibility":"visible","background-color":"white"});
     $(".r-2").css({"visibility":"visible","background-color":"white"});
     $(".box-colors").css("display","flex");
     $(".header").css("background-color",`rgba(224, 15, 8, 0.692)`);
